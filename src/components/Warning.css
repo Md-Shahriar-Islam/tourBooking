@@ -1,0 +1,8 @@
+.background {
+    background-image: url('https://i.ibb.co/JCwtr8w/time.jpg');
+    /* background-size: cover; */
+    height: 100vh;
+    margin-top: -05px;
+    padding-top: 200px;
+    color: yellow;
+}
