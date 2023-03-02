@@ -46,7 +46,7 @@ const Login = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="flex items-center justify-center mt-10 flex-col">
                 <input type="email" placeholder="your email" className=" input input-bordered w-full max-w-xs" {...register("email")} /><br></br>
                 <input type="password" placeholder="your password " className=" input input-bordered w-full max-w-xs" {...register("password")} /><br></br>
-                <input className="btn btn-wide" type="submit" />
+                <input className="btn btn-wide" type="submit" value='login' />
             </form>
             {
                 error

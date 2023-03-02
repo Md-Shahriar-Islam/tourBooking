@@ -9,6 +9,7 @@ const Registration = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const [updateProfile, updating, uerror] = useUpdateProfile(auth);
+
     let from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
@@ -16,6 +17,7 @@ const Registration = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
 
 
 
@@ -53,13 +55,13 @@ const Registration = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="flex items-center justify-center mt-10 flex-col">
                 <input type="name" placeholder="your name" className=" input input-bordered w-full max-w-xs" {...register("name")} /><br></br>
                 <input type="email" placeholder="your email" className=" input input-bordered w-full max-w-xs" {...register("email")} /><br></br>
-                <input type="password" placeholder="your password " className=" input input-bordered w-full max-w-xs" {...register("password")} /><br></br>
+                <input type="password" placeholder="your 6 digit password " className=" input input-bordered w-full max-w-xs" {...register("password")} /><br></br>
                 <p className="font-bold mb-2 text-2xl">register as......</p>
                 <select className="mb-4 relative"{...register("role")}>
                     <option value="admin">admin</option>
                     <option value="user">user</option>
                 </select>
-                <input className="btn btn-wide mt-2 relative" type="submit" />
+                <input className="btn btn-wide mt-2 relative" type="submit" value="register" />
 
             </form>
 
